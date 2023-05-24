@@ -17,7 +17,7 @@ To implement and to verify the truth table in Verilog HDL for the following logi
 Logic gates are the basic building blocks of any digital system. Logic gates are electronic circuits having one or more than one input and only one output. The relationship between the input and the output is based on a certain logic. 
 
 
-1) AND gate
+## 1) AND gate
 The AND gate is an electronic circuit that gives a high output (1) only if all its inputs are high. A dot (.) is used to show the AND operation i.e. A.B or can be written as AB
 	Y= A.B
 ![image](https://github.com/rvinifa/ex1final/assets/133735746/0b3bb617-91e2-48cb-b076-0ee1a72e0479)
@@ -28,7 +28,7 @@ The AND gate is an electronic circuit that gives a high output (1) only if all i
 
 
 
-2) OR gate
+## 2) OR gate
 The OR gate is an electronic circuit that gives a high output (1) if one or more of its inputs are high. A plus (+) is used to show the OR operation.
 
   Y= A+B
@@ -39,7 +39,7 @@ The OR gate is an electronic circuit that gives a high output (1) if one or more
 
 
 
-3) NOT gate
+## 3) NOT gate
 
 The NOT gate is an electronic circuit that produces an inverted version of the input at its output. It is also known as an inverter. If the input variable is A, the inverted output is known as NOT A. This is also shown as A' or A with a bar over the top, as shown at the outputs.
 
@@ -52,7 +52,7 @@ Y= A'
 
 
 
-4) NAND gate
+## 4) NAND gate
 This is a NOT-AND gate which is equal to an AND gate followed by a NOT gate. The outputs of all NAND gates are high if any of the inputs are low. The symbol is an AND gate with a small circle on the output. The small circle represents inversion.
 
 Y= (AB)’
@@ -64,7 +64,7 @@ Y= (AB)’
 
 
 
-5) NOR gate
+## 5) NOR gate
 
 This is a NOT-OR gate which is equal to an OR gate followed by a NOT gate. The outputs of all NOR gates are low if any of the inputs are high. The symbol is an OR gate with a small circle on the output. The small circle represents inversion.
 
@@ -78,7 +78,7 @@ Y= (A+B)’
 
 
 
-6) Ex-OR gate
+## 6) Ex-OR gate
 
 The 'Exclusive-OR' gate is a circuit which will give a high output if either, but not both of its two inputs are high. An encircled plus sign (⊕) is used to show the Ex-OR operation.
 
@@ -99,7 +99,7 @@ Y= A⊕B
 
 
 
-7) Ex-NOR gate
+## 7) Ex-NOR gate
 
 The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will give a low output if either, but not both of its two inputs are high. The symbol is an EX-OR gate with a small circle on the output. The small circle represents inversion.
 
@@ -123,12 +123,27 @@ Y= A⊕B
 5.	For different input combinations, generate the timing diagram.
 
 ## Program:
+```py
+module Exp1(a,b,andgate,notgate,orgate,nandgate,norgate,xorgate,xnorgate);
+input a,b;
+output andgate,orgate,notgate,norgate,nandgate,xorgate,xnorgate;
+and(andgate,a,b);
+or(orgate,a,b);
+not(notgate,a);
+nand(nandgate,a,b);
+nor(norgate,a,b);
+xor(xorgate,a,b);
+xnor(xnorgate,a,b);
+endmodule
+```
 
 
 ## RTL Schematic:
+![out](/out%201.png)
 
 
 ## Timing Diagram:
+![out](/out%202.png)
 
 
 
